@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Canvas</title>
+</head>
+<body>
+<canvas id="canvas" width="800" height="600" style="border:1px solid #000000;"></canvas>
+<script>
+ const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+// Create a red rectangle
+ctx.fillStyle = 'red';
+ctx.fillRect(50, 50, 150, 75);
+
+// Create a blue rectangle
+ctx.fillStyle = 'blue';
+ctx.fillRect(250, 50, 150, 75);
+
+// Create a green circle
+ctx.fillStyle = 'green';
+ctx.beginPath();
+ctx.arc(700, 100, 50, 0, Math.PI * 2);
+ctx.closePath();
+ctx.fill();
+
+// Create a yellow square
+ctx.fillStyle = 'yellow';
+ctx.fillRect(500, 50, 100, 75);
+
+// Create a purple polygon (pentagon) moved further to the left
+ctx.fillStyle = 'purple';
+ctx.beginPath();
+ctx.moveTo(300, 300);
+for (let i = 0; i < 5; i++) {
+  ctx.lineTo(300 + 50 * Math.cos(i * (Math.PI * 2) / 5), 350 + 50 * Math.sin(i * (Math.PI * 2) / 5));
+}
+ctx.closePath();
+ctx.fill();
+
+
+// Create a black star moved to the right
+ctx.fillStyle = 'black';
+ctx.beginPath();
+ctx.moveTo(700, 200);   
+ctx.lineTo(750, 200); 
+ctx.lineTo(775, 250);  
+ctx.lineTo(725, 275);  
+ctx.lineTo(700, 250);  
+ctx.lineTo(675, 275); 
+ctx.lineTo(625, 250);  
+ctx.lineTo(650, 200); 
+ctx.lineTo(600, 200);  
+ctx.lineTo(625, 225); 
+ctx.lineTo(650, 225);  
+ctx.lineTo(675, 250);  
+ctx.lineTo(700, 225);  
+ctx.lineTo(725, 250);  
+ctx.closePath();
+ctx.fill();
+
+// Create a pink ellipse
+ctx.fillStyle = 'pink';
+ctx.beginPath();
+ctx.ellipse(500, 250, 75, 50, 0, 0, Math.PI * 2);
+ctx.closePath();
+ctx.fill();
+
+// Create a brown triangle
+ctx.fillStyle = 'brown';
+ctx.beginPath();
+ctx.moveTo(250, 200);
+ctx.lineTo(300, 275);
+ctx.lineTo(350, 200);
+ctx.closePath();
+ctx.fill();
+
+// Create an orange parallelogram
+ctx.fillStyle = 'orange';
+ctx.beginPath();
+ctx.moveTo(100, 225);
+ctx.lineTo(150, 225);
+ctx.lineTo(175, 275);
+ctx.lineTo(125, 275);
+ctx.closePath();
+ctx.fill();
+
+// Create a gray rhombus
+ctx.fillStyle = 'gray';
+ctx.beginPath();
+ctx.moveTo(100, 350);
+ctx.lineTo(125, 325);
+ctx.lineTo(150, 350);
+ctx.lineTo(125, 375);
+ctx.closePath();
+ctx.fill();
+
+// Create a dark green triangle moved upward
+ctx.fillStyle = 'darkgreen';
+ctx.beginPath();
+ctx.moveTo(450, 350);
+ctx.lineTo(500, 425);
+ctx.lineTo(550, 350);
+ctx.closePath();
+ctx.fill();
+
+
+// Create a light blue hexagon moved to the right
+// Create a light blue hexagon moved upward
+ctx.fillStyle = 'lightblue';
+ctx.beginPath();
+ctx.moveTo(700, 350);
+for (let i = 0; i < 6; i++) {
+  ctx.lineTo(700 + 50 * Math.cos(i * (Math.PI * 2) / 6), 400 + 50 * Math.sin(i * (Math.PI * 2) / 6));
+}
+ctx.closePath();
+ctx.fill();
+
+
+
+</script>
+</body>
+</html>
